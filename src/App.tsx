@@ -9,11 +9,17 @@ function App() {
       <p className="text-3xl font-bold">
         Serial communication with mycobot in your browser!
       </p>
+      <a
+        href="https://github.com/neka-nat/mycobot-web"
+        className="text-sky-500 hover:text-slate-500"
+      >
+        Github link
+      </a>
       <p>
         First, follow{" "}
         <a
           href="https://zenn.dev/karaage0703/books/3be6bad93b0c8e/viewer/3b3b5a"
-          className="text-slate-500 hover:text-sky-500"
+          className="text-sky-500 hover:text-slate-500"
         >
           this link
         </a>{" "}
