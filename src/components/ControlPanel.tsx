@@ -24,31 +24,46 @@ export const ControlPanel = () => {
   }
 
   return (
-    <div>
-      <button onClick={handleConnectClick} disabled={isConnected}>
-        Connect
-      </button>
-      <button onClick={handleDisconnectClick} disabled={!isConnected}>
-        Disconnect
-      </button>
-      <button
-        onClick={() => handleSetColorClick(255, 0, 0)}
-        disabled={!isConnected}
-      >
-        LED Red
-      </button>
-      <button
-        onClick={() => handleSetColorClick(0, 255, 0)}
-        disabled={!isConnected}
-      >
-        LED Green
-      </button>
-      <button
-        onClick={() => handleSetColorClick(0, 0, 255)}
-        disabled={!isConnected}
-      >
-        LED Blue
-      </button>
+    <div className="flex flex-col items-start space-y-4">
+      <div className="flex flex-raw">
+        <button
+          onClick={handleConnectClick}
+          disabled={isConnected}
+          className="bg-gray-600 hover:bg-gray-100 text-white rounded shadow px-4 py-2"
+        >
+          Connect
+        </button>
+        <button
+          onClick={handleDisconnectClick}
+          disabled={!isConnected}
+          className="bg-gray-600 hover:bg-gray-100 text-white rounded shadow px-4 py-2"
+        >
+          Disconnect
+        </button>
+      </div>
+      <div className="flex flex-raw">
+        <button
+          onClick={() => handleSetColorClick(255, 0, 0)}
+          disabled={!isConnected}
+          className="bg-red-600 hover:bg-red-100 text-white rounded shadow px-4 py-2"
+        >
+          LED Red
+        </button>
+        <button
+          onClick={() => handleSetColorClick(0, 255, 0)}
+          disabled={!isConnected}
+          className="bg-green-600 hover:bg-green-100 text-white rounded shadow px-4 py-2"
+        >
+          LED Green
+        </button>
+        <button
+          onClick={() => handleSetColorClick(0, 0, 255)}
+          disabled={!isConnected}
+          className="bg-blue-600 hover:bg-blue-100 text-white rounded shadow px-4 py-2"
+        >
+          LED Blue
+        </button>
+      </div>
     </div>
   );
 };

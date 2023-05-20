@@ -37,6 +37,7 @@ export const JointSlider: React.FC<Props> = ({
         max={max}
         value={commandAngle}
         onChange={handleChange}
+        className="w-1/2 h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700"
       />
       <label>{max}</label>
     </div>

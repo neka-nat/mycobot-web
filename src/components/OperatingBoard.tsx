@@ -52,7 +52,7 @@ export const OperatingBoard = () => {
   }, [isConnected]);
 
   return (
-    <div>
+    <div className="flex flex-col space-y-4">
       {[1, 2, 3, 4, 5, 6].map((jointNumber) => (
         <JointSlider
           key={jointNumber}
