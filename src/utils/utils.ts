@@ -10,7 +10,7 @@ export function coordToInt(coord: number): number {
 }
 
 export function intToAngle(val: number): number {
-  return val / 100.0
+  return val / 100.0;
 }
 
 export function encodeInt16(data: number): number[] {

@@ -31,39 +31,42 @@ export class SerialHelper {
 
   async write(data: Uint8Array): Promise<void> {
     if (!this.writer) {
-      throw new Error('Not connected');
+      throw new Error("Not connected");
     }
     return this.writer.write(data);
   }
 
   async read(footer: number | undefined = undefined): Promise<Uint8Array> {
     if (!this.reader) {
-      throw new Error('Not connected');
+      throw new Error("Not connected");
     }
 
     let data = new Uint8Array();
     while (true) {
       try {
-          const { value, done } = await this.reader.read();
-          if (done) {
-              break;
-          }
-          const newData = new Uint8Array(data.length + value.length);
-          newData.set(data);
-          newData.set(value, data.length);
-          data = newData;
-          if (footer !== undefined && data[data.length - 1] === footer) {
-              break;
-          }
-      } catch (err) {
-          console.error(err);
+        const { value, done } = await this.reader.read();
+        if (done) {
           break;
+        }
+        const newData = new Uint8Array(data.length + value.length);
+        newData.set(data);
+        newData.set(value, data.length);
+        data = newData;
+        if (footer !== undefined && data[data.length - 1] === footer) {
+          break;
+        }
+      } catch (err) {
+        console.error(err);
+        break;
       }
     }
     return data;
   }
 
-  async writeAndRead(data: Uint8Array, footer: number | undefined = undefined): Promise<Uint8Array> {
+  async writeAndRead(
+    data: Uint8Array,
+    footer: number | undefined = undefined
+  ): Promise<Uint8Array> {
     await this.write(data);
     return this.read(footer);
   }

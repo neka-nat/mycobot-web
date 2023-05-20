@@ -7,7 +7,7 @@ export const ANGLE = {
   J4: 4,
   J5: 5,
   J6: 6,
-}
+};
 
 export const COORD = {
   X: 1,
@@ -16,18 +16,18 @@ export const COORD = {
   RX: 4,
   RY: 5,
   RZ: 6,
-}
+};
 
 export const DIRECTION = {
   DECREASE: 0,
   INCREASE: 1,
-}
+};
 
 export const MODE = {
   NORMAL: 0,
   ANGULAR: 1,
   LINEAR: 2,
-}
+};
 
 export const MYCOBOT_COMMANDS = {
   HEADER: parseInt("0xFE", 16),
@@ -54,5 +54,4 @@ export const MYCOBOT_COMMANDS = {
   IS_SERVO_ENABLE: parseInt("0x50", 16),
 
   SET_COLOR: parseInt("0x6A", 16),
-
 } as const;
