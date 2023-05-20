@@ -8,3 +8,7 @@ https://mycobot-web.vercel.app/
 ```sh
 yarn start
 ```
+
+## Screenshot
+
+![screenshot](images/screenshot.png)
