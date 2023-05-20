@@ -61,6 +61,7 @@ export const OperatingBoard = () => {
           commandAngle={commandAngles[jointNumber - 1]}
           min={-180}
           max={180}
+          disabled={!isConnected}
           onValueChange={handleValueChange}
         />
       ))}
