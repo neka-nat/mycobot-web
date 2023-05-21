@@ -6,6 +6,8 @@ https://mycobot-web.vercel.app/
 ## Getting started
 
 ```sh
+git clone https://github.com/neka-nat/mycobot-web.git
+cd mycobot-web
 yarn start
 ```
 
