@@ -96,4 +96,10 @@ export class Command {
       this.make_command(MYCOBOT_COMMANDS.SET_COLOR, [r, g, b])
     );
   }
+
+  async setBasicOutput(helper: SerialHelper, pinNo: number, pinSignal: number) {
+    await helper.write(
+      this.make_command(MYCOBOT_COMMANDS.SET_BASIC_OUTPUT, [pinNo, pinSignal])
+    );
+  }
 }

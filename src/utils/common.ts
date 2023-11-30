@@ -54,4 +54,9 @@ export const MYCOBOT_COMMANDS = {
   IS_SERVO_ENABLE: parseInt("0x50", 16),
 
   SET_COLOR: parseInt("0x6A", 16),
+
+  SET_BASIC_OUTPUT: parseInt("0xA0", 16),
+  GET_BASIC_INPUT: parseInt("0xA1", 16),
+  GET_BASE_INPUT: parseInt("0xA2", 16),
+  SET_BASE_PWM: parseInt("0xA5", 16),
 } as const;
